@@ -29,8 +29,6 @@ RNF07 - O backend deve conter um log registrando erros ou tentativas de acessos 
 RNF08 - O aplicativo deve suportar a sistemas operacionais Android e iOS.
 
 
-
-
 ## Padronização frontend
 PA01 - Componentização de layout/cards.
 
