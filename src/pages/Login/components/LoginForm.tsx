@@ -24,17 +24,17 @@ export function LoginForm() {
   return (
     <Box component="form" className={styles.form} noValidate onSubmit={handleSubmit(onSubmit)}>
       <Controller control={control} name="username" render={({ field }) => (
-        <TextField {...field} autoComplete="username" error={Boolean(errors.username)} fullWidth helperText={errors.username?.message} label="Username" placeholder="Digite seu username" slotProps={{ input: { startAdornment: <InputAdornment position="start"><PersonOutlineRoundedIcon fontSize="small" /></InputAdornment> } }} />
+        <TextField {...field} autoComplete="username" error={Boolean(errors.username)} fullWidth helperText={errors.username?.message} label="Username" placeholder="Digite seu username" size="small" slotProps={{ input: { startAdornment: <InputAdornment position="start"><PersonOutlineRoundedIcon fontSize="small" /></InputAdornment> } }} />
       )} />
       <Controller control={control} name="senha" render={({ field }) => (
-        <TextField {...field} autoComplete="current-password" error={Boolean(errors.senha)} fullWidth helperText={errors.senha?.message} label="Senha" placeholder="Digite sua senha" slotProps={{ input: { startAdornment: <InputAdornment position="start"><LockOutlinedIcon fontSize="small" /></InputAdornment> } }} type="password" />
+        <TextField {...field} autoComplete="current-password" error={Boolean(errors.senha)} fullWidth helperText={errors.senha?.message} label="Senha" placeholder="Digite sua senha" size="small" slotProps={{ input: { startAdornment: <InputAdornment position="start"><LockOutlinedIcon fontSize="small" /></InputAdornment> } }} type="password" />
       )} />
       <Box className={styles.formActions}>
         <MuiLink component={RouterLink} to="/recuperar-senha">Esqueceu sua senha?</MuiLink>
       </Box>
       <Button className={styles.submitButton} disabled={isSubmitting} endIcon={<ArrowForwardRoundedIcon />} size="large" type="submit" variant="contained">Entrar</Button>
       <Typography className={styles.footerText}>
-        Ainda nao tem uma conta? <MuiLink component={RouterLink} to="/cadastro">Criar conta</MuiLink>
+        Ainda não tem uma conta? <MuiLink component={RouterLink} to="/cadastro">Criar conta</MuiLink> e comece pela sua agenda.
       </Typography>
     </Box>
   );
