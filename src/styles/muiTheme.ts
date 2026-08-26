@@ -5,6 +5,7 @@ export const muiTheme = createTheme({
     mode: "dark",
     primary: { main: "#ff4d6d", dark: "#ff335c" },
     secondary: { main: "#7c3aed" },
+    info: { main: "#60a5fa" },
     background: { default: "#070a12", paper: "#111827" },
     text: { primary: "#f9fafb", secondary: "#9ca3af" },
   },
