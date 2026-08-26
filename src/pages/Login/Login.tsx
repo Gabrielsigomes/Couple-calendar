@@ -1,4 +1,6 @@
 import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
+import PeopleAltRoundedIcon from "@mui/icons-material/PeopleAltRounded";
+import PersonOutlineRoundedIcon from "@mui/icons-material/PersonOutlineRounded";
 import { Box, Chip, Typography } from "@mui/material";
 
 import { LoginForm } from "./components/LoginForm";
@@ -17,30 +19,53 @@ export function Login() {
           </Typography>
         </Box>
         <Box className={styles.header}>
-          <Typography className={styles.eyebrow}>Sua rotina em casal</Typography>
+          <Typography className={styles.eyebrow}>Organização pessoal e a dois</Typography>
           <Typography id="login-title" component="h1" variant="h3">
             Entrar na sua conta
           </Typography>
           <Typography>
-            Organize compromissos, planos e momentos importantes em uma agenda feita
-            para os dois.
+            Organize seus compromissos pessoais e compartilhe planos, tarefas e
+            momentos importantes com seu parceiro.
           </Typography>
+        </Box>
+        <Box className={styles.agendaTypes} aria-label="Formas de usar a agenda">
+          <Box className={`${styles.agendaType} ${styles.personalAgenda}`}>
+            <Box className={styles.agendaTypeIcon} aria-hidden="true">
+              <PersonOutlineRoundedIcon fontSize="small" />
+            </Box>
+            <Box>
+              <Typography component="strong">Agenda pessoal</Typography>
+              <Typography component="span">Seus compromissos e tarefas.</Typography>
+            </Box>
+          </Box>
+          <Box className={`${styles.agendaType} ${styles.sharedAgenda}`}>
+            <Box className={styles.agendaTypeIcon} aria-hidden="true">
+              <PeopleAltRoundedIcon fontSize="small" />
+            </Box>
+            <Box>
+              <Typography component="strong">Agenda compartilhada</Typography>
+              <Typography component="span">Planos e momentos para os dois.</Typography>
+            </Box>
+          </Box>
         </Box>
         <LoginForm />
       </section>
-      <section className={styles.heroPanel} aria-label="Agenda compartilhada">
+      <section className={styles.heroPanel} aria-label="Agenda pessoal e compartilhada">
         <img
           src="/login-hero.png"
-          alt="Mesa aconchegante com agenda, cafe e celular para organizar planos do casal"
+          alt="Agenda, celular e café em uma mesa para organizar a rotina"
         />
         <Box className={styles.heroOverlay}>
-          <Chip className={styles.heroBadge} label="Agenda compartilhada" size="small" />
+          <Box className={styles.heroBadges}>
+            <Chip className={`${styles.heroBadge} ${styles.heroBadgePersonal}`} label="Pessoal" size="small" />
+            <Chip className={`${styles.heroBadge} ${styles.heroBadgeShared}`} label="Compartilhada" size="small" />
+          </Box>
           <Typography component="h2" variant="h3">
-            Planeje a semana com mais leveza.
+            Seu tempo, no seu ritmo.
           </Typography>
           <Typography>
-            Compromissos, tarefas e momentos especiais visiveis para o casal em um so
-            lugar.
+            Tenha clareza sobre a sua agenda e compartilhe o que importa com quem faz
+            parte da sua vida.
           </Typography>
         </Box>
       </section>
